@@ -1,0 +1,7 @@
+.about {line-height: 35px; margin-top: 40px;}
+.ci {text-align: center; margin-bottom: 30px;}
+.hover img:last-child{display: none}
+.hover:hover img:first-child{display: none}
+.hover:hover img:last-child{display:inline-block}
+.work-experience2 {text-align: center; margin-bottom: 20px;}
+
