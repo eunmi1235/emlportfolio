@@ -1,7 +1,12 @@
 .slideshow
 {
     position: relative;
+    top: 80px;
+    left: 0;
+    display: block;
     float: left;
+    clear: both;
+    min-width: 1200px;
 }
 .slideshow__item
 {
@@ -9,7 +14,6 @@
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
 }
 .slideshow__prev,
 .slideshow__next
