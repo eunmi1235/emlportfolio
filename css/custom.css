@@ -4,6 +4,7 @@ body
     margin: 0;
     padding: 0;
     min-width: 1600px;
+    overflow-x: hidden;
 }
 .slideshow {
     width: 100%;
