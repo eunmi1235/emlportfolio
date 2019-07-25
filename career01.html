@@ -54,8 +54,67 @@
                 </div>
             </div>
         </div>
-    
-    <div class="clear"></div>    
+                <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: 'index.html',
+                    timeout: 10000,
+                    dataType: 'html',
+                    success: function (data) {
+                        $(data).find('section.demo').each(function (i) {
+                            $(this).children('.desc').remove();
+                            var code = $(this).html();
+                            var $pre = $('<pre class="source"><code></code></pre>').appendTo($('section.demo').eq(i)).children('code');
+                            code = code.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
+                            code = code.substring(code.indexOf('\n') + 1);
+                            code = code.substring(code.lastIndexOf('\n') + 1, -1);
+                            var between = code.split('\n')[0].split(' ').length;
+                            var newCode = [];
+                            code.split('\n').forEach(function (self) {
+                                self = self.replace(self.substring(0, between - 1), '');
+                                newCode += '\n' + self;
+                            });
+                            newCode = newCode.substring(newCode.indexOf('\n') + 2);
+                            newCode = newCode.substring(newCode.lastIndexOf('\n') + 1, -1);
+                            $pre.html(newCode);
+                        }).promise().done(function () {
+                            $('pre > code').each(function () {
+                                hljs.highlightBlock(this);
+                            })
+                        });
+                    }
+                });
+            });
+    </script>    
+    <script type="text/javascript"
+    src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/slideshow.js" type="text/javascript"></script>
+    <script src="js/slideshow.init.js" type="text/javascript"></script>
+    <script type="text/javascript">  
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+    </script>
+
     <!-- style.css-->
     <div class="content2">
         <div class="product">
@@ -355,67 +414,7 @@
 </div>
     
 <div class="clear"></div>
-            <script>
-            $(document).ready(function () {
-                $.ajax({
-                    url: 'index.html',
-                    timeout: 10000,
-                    dataType: 'html',
-                    success: function (data) {
-                        $(data).find('section.demo').each(function (i) {
-                            $(this).children('.desc').remove();
-                            var code = $(this).html();
-                            var $pre = $('<pre class="source"><code></code></pre>').appendTo($('section.demo').eq(i)).children('code');
-                            code = code.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
-                            code = code.substring(code.indexOf('\n') + 1);
-                            code = code.substring(code.lastIndexOf('\n') + 1, -1);
-                            var between = code.split('\n')[0].split(' ').length;
-                            var newCode = [];
-                            code.split('\n').forEach(function (self) {
-                                self = self.replace(self.substring(0, between - 1), '');
-                                newCode += '\n' + self;
-                            });
-                            newCode = newCode.substring(newCode.indexOf('\n') + 2);
-                            newCode = newCode.substring(newCode.lastIndexOf('\n') + 1, -1);
-                            $pre.html(newCode);
-                        }).promise().done(function () {
-                            $('pre > code').each(function () {
-                                hljs.highlightBlock(this);
-                            })
-                        });
-                    }
-                });
-            });
-    </script>    
-<script type="text/javascript"
-src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="js/slideshow.js" type="text/javascript"></script>
-        <script src="js/slideshow.init.js" type="text/javascript"></script>
-        <script type="text/javascript">  
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-36251023-1']);
-          _gaq.push(['_setDomainName', 'jqueryscript.net']);
-          _gaq.push(['_trackPageview']);
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
-		
+
 		<!-- Jquery -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		
