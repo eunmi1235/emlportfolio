@@ -1,3 +1,35 @@
+/* renewal.css */
 .bl_img{
 	margin: 20px auto;
 }
+
+/* year.css */
+.mo {
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+.ye_img {
+	width: 780px;
+	margin: 0 auto;
+	margin: 20px auto;
+}
+.ye_img li {
+	float: left;
+}
+.ye_img li.margin {
+	margin-right: 20px;
+}
+ul.model li{
+	float: left;
+	margin-right: 20px;
+}
+
+/* reflet.css */
+.mockup {}
+.mockup li {float: left;}
+.mockup li.margin { margin-right: 10px;
+}
+
+/*poster.css */
+
