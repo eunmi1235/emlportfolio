@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@font-face{ 
+    font-family:'ns'; 
+    src:url('fonts/NanumSquareR_0.eot'); src:url('fonts/NanumSquareR_0.eot?#iefix') format(‘embedded-opentype’), url('fonts/NanumSquareR.woff') format(‘woff’), url('fonts/NanumSquareR_0.ttf') format('truetype'), url('fonts/NanumSquare.svg') format('svg');
+}
+/* CSS Reset  */
+
+/* 안과 밖에 여백을 0으로 초기화 */
+html,body,div,p {margin:0; padding:0; font-family: 'ns', sans-serif;} 
+
+/* 링크가 걸린 이미지에 대해 테두리 점선을 초기화 */
+a,img {border: none;}
+a {selector-dummy : expression(this.hideFocus=true);}
+a:active, a:focus { -moz-outline:none; outline:none; }
+
+/* 가장 클래스 설정 */
+.clearfix:before {
+	content: "";
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+
+#wrap{
+	margin: 0; padding: 0;
+}
+#back {
+	width: 1000px;
+	margin: 0 auto;
+}
+.mockup {}
+.mockup li {float: left;}
+.mockup li.margin {
+	border: 1px solid rgba(194, 194, 194, 0.5); margin-right: 10px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 0;
+	letter-spacing: 3px;
+}
+p.p {
+	text-align: center;
+	font-size: 20px;
+}
+
+.yellowbar {
+	width: 500px;
+	border-bottom: 3px dashed yellow;
+	text-align: center;
+	margin: 0 auto;
+	margin: 40px auto 30px auto;
+}
+.contents p {
+	padding: 5px 0;	
+}
+.contents p.pp {
+	padding-top: 50px;
+}
+
+.bl_img {
+	width: 780px;
+	margin: 0 auto;
+	margin: 20px auto;
+}
+.bl_img li {
+	float: left;
+}
+.bl_img li.margin {
+	margin-right: 20px;
+}
+
+ul.list {list-style: none;}
+ul.list li {float: left; margin-right: 100px;}
+ul.list2 {list-style: none; clear: both;}
+ul.list2 li {float: left; margin-top: 10px; margin-bottom: 50px;}
+ul.list2 li:nth-child(2) {padding-left: 137px;}
+ul.list2 li:nth-child(3) {padding-left: 127px;}
+ul.list2 li:nth-child(4) {padding-left: 131px;}
+ul.list3 {list-style: none; clear: both;}
+ul.list3 li {float: left; margin-top: 10px; margin-bottom: 50px;}
+ul.list3 li:nth-child(2) {padding-left: 160px;}
+ul.list3 li:nth-child(3) {padding-left: 155px;}
+ul.list3 li:nth-child(4) {padding-left: 150px;}
+
+ul.ee {list-style: none;}
+ul.ee li {float: left;}
+ul.ee li:nth-child(1) {padding-left: 280px;}
+ul.ee li:nth-child(2) {padding-left: 230px;}
+
+
+.footer2 {width:441px; height: 50px; margin: 0 auto; padding: 50px 0; font-size: 12px; font-family: 'dotum',sans-serif;}
+.footer2 ul {list-style: none;}
+.footer2 ul li {float: left; margin-right: 15px;}
+.footer2 ul li:nth-child(4) {padding-right: 0; margin-right: 0;}
+ul.a12 {list-style: none; text-align: center; margin: 0 auto;}
+ul.a12 li {float: left; padding: 10px 0;}
+ul.a12 li:nth-child(1) {padding-left: 70px;}
+ul.a12 li:nth-child(2) {padding-left: 55px;}
+ul.a12 li:nth-child(3) {padding-left: 140px;}
+ul.a12 li:nth-child(4) {padding-left: 150px;}
+ul.a12 li:nth-child(5) {padding-left: 70px;}
+
