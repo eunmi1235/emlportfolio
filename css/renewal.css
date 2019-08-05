@@ -26,10 +26,16 @@ ul.model li{
 }
 
 /* reflet.css */
-.mockup {}
+.mockup {
+	margin-top: 20px;
+}
 .mockup li {float: left;}
 .mockup li.margin { margin-right: 10px;
 }
 
-/*poster.css */
-
+/* bookcover.css */
+.bookcover {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+}
