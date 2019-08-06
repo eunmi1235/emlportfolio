@@ -4,4 +4,27 @@
 .hover:hover img:first-child{display: none}
 .hover:hover img:last-child{display:inline-block}
 .work-experience2 {text-align: center; margin-bottom: 20px;}
+.h_img1 {
+	padding: 10px;
+	width: 278px;
+	height: 198px;
+	border: 1px solid #ff0060;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
 
+div.zz {
+	text-align: center;
+	font-size: 15px;
+	border-top: 1px dashed #ff6875;
+	line-height: 25px;
+	padding-top: 5px;
+}
+h3.ii {
+	margin: 0;
+	margin: 10px 0;
+	text-align: center;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
