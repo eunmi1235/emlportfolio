@@ -13,7 +13,6 @@
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/sunrise.css" type="text/css" />
-    
 	</head>
 	<body>
 		<header>
@@ -54,7 +53,38 @@
                 </div>
             </div>
         </div>
-     </script>    
+    <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: 'index.html',
+                    timeout: 10000,
+                    dataType: 'html',
+                    success: function (data) {
+                        $(data).find('section.demo').each(function (i) {
+                            $(this).children('.desc').remove();
+                            var code = $(this).html();
+                            var $pre = $('<pre class="source"><code></code></pre>').appendTo($('section.demo').eq(i)).children('code');
+                            code = code.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
+                            code = code.substring(code.indexOf('\n') + 1);
+                            code = code.substring(code.lastIndexOf('\n') + 1, -1);
+                            var between = code.split('\n')[0].split(' ').length;
+                            var newCode = [];
+                            code.split('\n').forEach(function (self) {
+                                self = self.replace(self.substring(0, between - 1), '');
+                                newCode += '\n' + self;
+                            });
+                            newCode = newCode.substring(newCode.indexOf('\n') + 2);
+                            newCode = newCode.substring(newCode.lastIndexOf('\n') + 1, -1);
+                            $pre.html(newCode);
+                        }).promise().done(function () {
+                            $('pre > code').each(function () {
+                                hljs.highlightBlock(this);
+                            })
+                        });
+                    }
+                });
+            });
+    </script>    
 <script type="text/javascript"
 src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
@@ -86,7 +116,19 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 		
 		<!-- Jquery -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <div class="clear"></div>    
+		
+		<!-- Github button for demo page -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<!-- GRT Youtube Popup -->
+		<script src="js/grt-responsive-menu.js"></script>
+        <!-- js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+        <script src="js/sunrise.js">
+		</script>
+
+    <div class="clearfix"></div>    
     <!-- style.css-->
     <div class="content2">
         <div class="product">
@@ -364,8 +406,8 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
             <button onclick="sunrise3.sunrise('closePopup');">Close Button</button>
             </div>
             <!-- 14 end--->            
-				</div>
-			</li>       
+            </div>
+            </li>        
              
             
             <li>
@@ -385,50 +427,8 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </div>
     
-<div class="clear"></div>
-            <script>
-            $(document).ready(function () {
-                $.ajax({
-                    url: 'index.html',
-                    timeout: 10000,
-                    dataType: 'html',
-                    success: function (data) {
-                        $(data).find('section.demo').each(function (i) {
-                            $(this).children('.desc').remove();
-                            var code = $(this).html();
-                            var $pre = $('<pre class="source"><code></code></pre>').appendTo($('section.demo').eq(i)).children('code');
-                            code = code.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
-                            code = code.substring(code.indexOf('\n') + 1);
-                            code = code.substring(code.lastIndexOf('\n') + 1, -1);
-                            var between = code.split('\n')[0].split(' ').length;
-                            var newCode = [];
-                            code.split('\n').forEach(function (self) {
-                                self = self.replace(self.substring(0, between - 1), '');
-                                newCode += '\n' + self;
-                            });
-                            newCode = newCode.substring(newCode.indexOf('\n') + 2);
-                            newCode = newCode.substring(newCode.lastIndexOf('\n') + 1, -1);
-                            $pre.html(newCode);
-                        }).promise().done(function () {
-                            $('pre > code').each(function () {
-                                hljs.highlightBlock(this);
-                            })
-                        });
-                    }
-                });
-            });
-   
-		
-		<!-- Github button for demo page -->
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-		<!-- GRT Youtube Popup -->
-		<script src="js/grt-responsive-menu.js"></script>
-        <!-- js -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-        <script src="js/sunrise.js"></script>
-
+<div class="clearfix"></div>
+            
 <footer>
    <div class="footer">
     <p class="copy">© All right reserved. Eunmi’s portfolio My career</p>
