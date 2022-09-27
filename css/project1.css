@@ -96,3 +96,12 @@ ul.a13 {list-style: none; text-align: center; margin: 0 auto;}
 ul.a13 li {float: left; padding: 10px 0;}
 ul.a13 li:nth-child(1) {padding-left: 360px;}
 ul.a13 li:nth-child(2) {padding-left: 55px;}
+
+
+@media all and (max-width:1000px){ 
+    #back {
+        min-width: auto; 
+        max-width: 100%;
+        margin: 0 auto; 
+    }
+}
