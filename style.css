@@ -81,6 +81,8 @@ h3.ii {
 	margin-bottom: 10px; 
 	margin-top: 0; 
 	line-height: normal; 
+	display: flex;
+	align-items: center;
 } 
 .textbox01 {
 	font-size: 16px; 
@@ -100,6 +102,10 @@ h3.ii {
 .viewbtn span {
 	float: none;
 	margin: 0 auto ;
+}
+.webicon {
+	vertical-align: middle;
+	margin-right: 7px;
 }
 
 @media all and (max-width: 1000px) {
