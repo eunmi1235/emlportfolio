@@ -1,7 +1,7 @@
 // První slideshow
 $(".slideshow--top").slideshow({
-    "autoPlaySpeed" : 2500,
-    "fadeSpeed"     : 500,
+    "autoPlaySpeed" : 1000000,
+    "fadeSpeed"     : 1000,
     "hoverStop"     : true,
     "nav"           : true,
     "dots"          : true

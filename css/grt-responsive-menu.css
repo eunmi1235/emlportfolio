@@ -11,18 +11,14 @@
 
 /* Menu */
 header {
-	position:fixed;
-	top:0;
-	left:0;
-	right:0;
+	/* position:fixed;
+	top:0; */
 	width:100%;
-	background-color: #fff;
+	background-color: #fff; 
 	height:80px;
-	z-index:9999;
+	/* z-index:9999; */
     display: block;
     overflow: hidden;
-    clear: both;
-    float: left;
 }
 
 header.scrolled {
@@ -30,32 +26,33 @@ header.scrolled {
 }
 
 header nav {
-	clear:both;
-	display: block;
-	height:0px;
 	position:relative;
-    padding-right:100px;
-    
+	top: 0;
+	display: flex;
+	align-items: center; 
 }
 
 
 .menu-container {
     margin:0 auto;
+	height: 100%; 
 }
 
 .grt-menu-row {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center; 
+	height: 100%;
 }
-
+.grt-menu-right {
+	padding-right: 15px;
+}
 a.grt-logo{
 	display:inline-block;
     }
 a.grt-logo img {
-    margin-top: 20px;
-	max-height: 70px;
-    width:170px;
+    max-width:170px;
     padding-left:15px;    
 }
 
@@ -75,7 +72,6 @@ a.grt-logo img {
 ul.grt-menu {
 	display: block;
 	float:right;
-	margin:25px 0 0 0;
 	padding:0;
 	list-style-type: none;
 }
@@ -213,7 +209,7 @@ ul.grt-menu li.grt-dropdown.active-dropdown a {
 		display:inline-block;
 		position:absolute;
 		right:0;
-		top:10px;
+		/* top:10px; */
 		background:#FFF;
 		color:#3d3d3d;
 		margin:0;

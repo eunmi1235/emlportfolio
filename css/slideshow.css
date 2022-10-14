@@ -37,6 +37,9 @@
     background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 0%, rgba(231,56,39,0) 100%);
     background: linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(231,56,39,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#e73827', GradientType=1 );
+    width: 15%;
+    height: 0;
+    padding-bottom: 25.5%;
 }
 .slideshow__next
 {
@@ -53,5 +56,7 @@
     background: -ms-linear-gradient(left, rgba(231,56,39,0) 0%, rgba(231,56,39,0) 0%, rgba(0,0,0,0.2) 100%);
     background: linear-gradient(to right, rgba(231,56,39,0) 0%, rgba(231,56,39,0) 0%, rgba(0,0,0,0.2) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e73827', endColorstr='#000000', GradientType=1 );
+    height: 0;
+    padding-bottom: 25.5%;
 }
 
