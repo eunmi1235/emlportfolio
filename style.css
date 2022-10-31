@@ -7,6 +7,8 @@
 /* common.css */
 body {
 	overflow-x: hidden; 
+	letter-spacing: -1px;  
+	word-spacing: -1px; 
 } 
 ::selection,
  -webkit-::selection,
@@ -106,7 +108,9 @@ ul,li {
 .inline-center {
 	vertical-align: middle; 
 }
-
+.m_only {
+	display: none;
+} 
 
 
 
@@ -265,6 +269,16 @@ h3.ii {
 .link_title {
 	margin-top: 3px;  
 }
+.projectInfo > li::before,
+.projectInfo > li {
+	display: inline-flex; 
+}  
+.projectInfo>li::before {
+	content: "▪";
+	margin-right: 3px; 
+}
+
+
 @media all and (max-width: 1000px) {
 	.flex_center {
 		display: block;
@@ -298,4 +312,7 @@ h3.ii {
 	.card .card-block { 
 		padding: 1.6667rem;  
 	}   
+	.m_only {
+		display: block;
+	}
 }
