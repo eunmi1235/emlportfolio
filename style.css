@@ -62,6 +62,9 @@ ul,li {
 .fontSize20 {
 	font-size: 1.1rem;
 }
+.fontSize24 {
+	font-size: 1.333rem;
+}
 .fontSize30 {
 	font-size: 1.6666rem;
 }
@@ -91,8 +94,8 @@ ul,li {
 }
 .backBtn {
 	color: #fff; 
-	width: 100%;
-	justify-content: flex-end;   
+	display: block;
+	margin-left: auto; 
 }
 .viewbtn { 
 	width: 100%;
@@ -100,6 +103,13 @@ ul,li {
 	margin: 30px auto;  
 	text-align: center;  
 }  
+.inline-center {
+	vertical-align: middle; 
+}
+
+
+
+
 
 /* contents */  
 .content-wrapper-sub {
@@ -220,8 +230,12 @@ h3.ii {
     right: 0;
     bottom: calc(100% - 80%);
     width: 100%;
-    background-size: cover;  
+    background-size: contain;
 	opacity: .15; 
+} 
+.bg_img_oneContents { 
+	background-size: cover; 
+	bottom: 0; 
 }
 .main_img { 
 	background-color: #333;
@@ -249,7 +263,7 @@ h3.ii {
 	-o-backface-visibility: hidden; 
 }
 .link_title {
-	margin-top: 3px; 
+	margin-top: 3px;  
 }
 @media all and (max-width: 1000px) {
 	.flex_center {
@@ -263,11 +277,22 @@ h3.ii {
 	}
 	div.go {
 		width: 100%; 
-	}
-	.bg_img {
-		bottom: calc(100% - 15%);
-	}
+	}  
 	.text-center h1 {
-		font-size: 1.666em;  
+		font-size: 1.666em; 
 	}
-} 
+	.card .card-block {
+		padding: 2.7778rem;  
+	}   
+	.bg_img_oneContents { 
+		background-size: contain; 
+	}
+}  
+@media all and (max-width: 767px) {   
+	.content-wrapper-sub {
+		margin-top: 2.7778rem;
+	}
+	.card .card-block { 
+		padding: 1.6667rem;  
+	}   
+}
