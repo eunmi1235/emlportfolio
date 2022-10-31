@@ -287,6 +287,9 @@ h3.ii {
 	.bg_img_oneContents { 
 		background-size: contain; 
 	}
+	.viewbtn {
+		margin: 0;  
+	}
 }  
 @media all and (max-width: 767px) {   
 	.content-wrapper-sub {
