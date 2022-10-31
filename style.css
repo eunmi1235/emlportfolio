@@ -7,7 +7,15 @@
 /* common.css */
 body {
 	overflow-x: hidden; 
-}  
+} 
+::selection,
+ -webkit-::selection,
+ -moz-::selection,
+ -o-::selection,
+ -ms-::selection{ 
+	background: yellow;
+	color: blue;   
+}
 ul,li {
 	list-style: none; 
 	padding: 0;
