@@ -1,39 +1,180 @@
-/* CSS reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
-	margin:0;
-	padding:0;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,
+aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,
+nav,output,ruby,section,summary,time,mark,audio,video,main,button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-weight: normal;
 }
-html,body {
-	margin:0;
-	padding:0;
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,
+nav,section, .pc-ver {
+    display: block;
+}
+html {
+    font-size: 16px;
+    position: relative;
+}
+body {
+    margin: 0;
+    padding: 0;  
+}
+/*scroll style */
+body::-webkit-scrollbar {
+    /*display: none;*/
+    width: 5px;
+    height: 5px;
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar-thumb { 
+    background-color: #bbb;  
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+span,
+a.text-flex,
+.contents a.text-flex { /*  a링크 공통 나열 클래스 명 text-flex */
+    display: inline-block;
 }
 table {
-	border-collapse:collapse;
-	border-spacing:0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-fieldset,img { 
-	border:0;
+input,
+textarea,
+select {
+    font-family: 'Pretendard', sans-serif;
 }
-input{
-	border:1px solid #b0b0b0;
-	padding:3px 5px 4px;
-	color:#979797;
-	width:190px;
+select {
+    -moz-appearance:none;
+    -o-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
 }
-address,caption,cite,code,dfn,th,var {
-	font-style:normal;
-	font-weight:normal;
+select::-ms-expand {
+    display: none;
 }
-ol,ul {
-	list-style:none;
+input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    font-size: 16px;
 }
-caption,th {
-	text-align:left;
+input:focus {
+    outline: none;
 }
-h1,h2,h3,h4,h5,h6 {
-	font-size:100%;
-	font-weight:normal;
+input[type="checkbox"] {
+    width: auto;
 }
+input::placeholder {
+    color: #999;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+
+    /* 이미지 저장 드래그 방지 */
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -o-user-drag: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+a:hover {
+    text-decoration: none;
+} 
+ul,li,ol {
+    list-style: none;
+    margin: 0;
+}
+h1 {
+    margin: 0;
+}
+fieldset {
+    padding: 0;
+    border: 0;
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    padding: 0;
+}  
+/* pc, mobile 공통 display: none */
+.blind_none {
+    display: none;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
+    /* 이미지 저장 드래그 방지 */
+    -webkit-touch-callout:none;
+    -moz-touch-callout:none;
+    -ms-touch-callout:none;
+    -o-touch-callout:none;
+
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -o-user-drag: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+
+    pointer-events: none;
+
+    image-rendering: crisp-edges;
+	image-rendering: -webkit-optimize-contrast; 
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+	transform: translateZ(0);
+	transform: -webkit-translateZ(0);
+	transform: -moz-translateZ(0);
+	transform: -ms-translateZ(0);
+	transform: -o-translateZ(0); 
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;  
+} 
 q:before,q:after {
 	content:'';
 }

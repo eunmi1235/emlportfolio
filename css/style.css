@@ -1,9 +1,4 @@
-@media screen and (max-width:480px){
-    .point {
-        width:auto; float: none; min-height: 200px;
-        margin-bottom: 10px;
-    }
-}
+@charset "UTF-8";
 .clear {clear:both;}
 
 .content2 {
@@ -60,3 +55,11 @@ footer {
     text-align: center;
 }
 .copy {font-size: 15px;}
+
+
+@media screen and (max-width:480px){
+    .point {
+        width:auto; float: none; min-height: 200px;
+        margin-bottom: 10px;
+    }
+} 

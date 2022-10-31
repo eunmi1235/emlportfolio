@@ -1,11 +1,15 @@
-/* common.css */
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 @font-face {
 	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 	src: url(./font/Pretendard-Regular.woff); 
 } 
+/* common.css */
+body {
+	overflow-x: hidden; 
+}  
 ul,li {
-	list-style: none;
+	list-style: none; 
 	padding: 0;
 	margin: 0;
 } 
@@ -13,6 +17,18 @@ ul,li {
 	text-align: center;
 	margin: 0 auto; 
 } 
+.text-blind { /* 대체 텍스트 기법 */
+	overflow: hidden;
+	position: absolute; 
+	border: 0; 
+	width: 1px;
+	height: 1px;
+	clip: rect(1px,1px,1px,1px);
+	clip-path: inset(50%); 
+} 
+.martop0 {
+	margin-top: 0; 
+}
 .marbottom0 {
 	margin-bottom: 0px;
 }
@@ -30,17 +46,58 @@ ul,li {
 }
 .marbottom50 {
 	margin-bottom: 50px; 
-} 
-body {
-	overflow-x: hidden; 
 }  
 .fontStyleKo {
 	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-	font-size: 16px; 
-}   
+	font-size: 16px;  
+} 
+.fontSize20 {
+	font-size: 1.1rem;
+}
+.fontSize30 {
+	font-size: 1.6666rem;
+}
+.fontSize40 {
+	font-size: 2.2222rem;
+}
+.fontSize50 {
+	font-size: 2.777rem;
+}
+.fontSize60 {
+	font-size: 3.333rem; 
+}
+.project_icon {
+	background: url(/image/project_icon.png) no-repeat 0 0; 
+	width: 30px;
+	height: 30px;  
+	display: inline-block; 
+	background-size: contain;  
+	vertical-align: middle; 
+}
+.flex_center {
+	display: flex;
+	align-items: center; 
+}
+.flex_row_center { 
+	justify-content: center; 
+}
+.backBtn {
+	color: #fff; 
+	width: 100%;
+	justify-content: flex-end;   
+}
+.viewbtn { 
+	width: 100%;
+	height: 100%; 
+	margin: 30px auto;  
+	text-align: center;  
+}  
 
-
-.about {line-height: 35px; margin-top: 40px;}
+/* contents */  
+.content-wrapper-sub {
+	margin-top: 5.55555rem; 
+}
+.about {line-height: 35px; margin-top: 40px;} 
 .ci {text-align: center; margin-bottom: 30px;}
 .hover img:last-child{display: none}
 .hover:hover img:first-child{display: none}
@@ -91,14 +148,6 @@ h3.ii {
 .contentsbox>li { 
 	margin-bottom: 10px; 
 }
-.viewbtn {
-	display: inline-block;
-	width: 100%;
-	height: 100%; 
-	margin: 30px auto;  
-	text-align: center;  
-}  
-
 .viewbtn span {
 	float: none;
 	margin: 0 auto ;
@@ -107,8 +156,98 @@ h3.ii {
 	vertical-align: middle;
 	margin-right: 7px;
 }
-
+.background-color-layer {
+	bottom: 0; 
+} 
+.bg_img{
+	background: linear-gradient(
+		to bottom,
+		rgba(255,255,255,0) 10%,
+		rgba(255,255,255,0.5) 25%,
+		rgba(255,0,96,0.7) 40%,
+		rgba(255,0,96,1) 50%,
+		rgba(255,105,117,1) 75%, 
+		rgba(255,105,117,1) 100%), 
+		url(/image/n.jpg);
+	background: -webkit-linear-gradient(
+		to bottom,
+		rgba(255,255,255,0) 10%,
+		rgba(255,255,255,0.5) 25%,
+		rgba(255,0,96,0.7) 40%,
+		rgba(255,0,96,1) 50%,
+		rgba(255,105,117,1) 75%, 
+		rgba(255,105,117,1) 100%), 
+		url(/image/n.jpg); 
+	background: -ms-linear-gradient(
+		to bottom,
+		rgba(255,255,255,0) 10%,
+		rgba(255,255,255,0.5) 25%,
+		rgba(255,0,96,0.7) 40%,
+		rgba(255,0,96,1) 50%,
+		rgba(255,105,117,1) 75%, 
+		rgba(255,105,117,1) 100%), 
+		url(/image/n.jpg); 
+	background: -moz-linear-gradient(
+		to bottom,
+		rgba(255,255,255,0) 10%,
+		rgba(255,255,255,0.5) 25%,
+		rgba(255,0,96,0.7) 40%,
+		rgba(255,0,96,1) 50%,
+		rgba(255,105,117,1) 75%, 
+		rgba(255,105,117,1) 100%), 
+		url(/image/n.jpg); 
+	background: -o-linear-gradient(
+		to bottom,
+		rgba(255,255,255,0) 10%,
+		rgba(255,255,255,0.5) 25%,
+		rgba(255,0,96,0.7) 40%,
+		rgba(255,0,96,1) 50%,
+		rgba(255,105,117,1) 75%, 
+		rgba(255,105,117,1) 100%), 
+		url(/image/n.jpg); 
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 80%);
+    width: 100%;
+    background-size: cover;  
+	opacity: .15; 
+}
+.main_img { 
+	background-color: #333;
+	border-radius: 100%; 
+	-webkit-border-radius: 100%; 
+	-ms-border-radius: 100%; 
+	-o-border-radius: 100%; 
+	-moz-border-radius: 100%; 
+	margin: 0 auto;
+	text-align: center; 
+	image-rendering: crisp-edges;
+	image-rendering: -webkit-optimize-contrast; 
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+	transform: translateZ(0);
+	transform: -webkit-translateZ(0);
+	transform: -moz-translateZ(0);
+	transform: -ms-translateZ(0);
+	transform: -o-translateZ(0); 
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden; 
+}
+.link_title {
+	margin-top: 3px; 
+}
 @media all and (max-width: 1000px) {
+	.flex_center {
+		display: block;
+		align-items: normal;   
+	}
 	.h_img1 {
 		width: 100%;
 		height: 100%;
@@ -117,4 +256,10 @@ h3.ii {
 	div.go {
 		width: 100%; 
 	}
-}
+	.bg_img {
+		bottom: calc(100% - 15%);
+	}
+	.text-center h1 {
+		font-size: 1.666em;  
+	}
+} 
