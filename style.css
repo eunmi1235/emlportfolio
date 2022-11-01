@@ -184,46 +184,46 @@ h3.ii {
 .bg_img{
 	background: linear-gradient(
 		to bottom,
-		rgba(255,255,255,0) 10%,
-		rgba(255,255,255,0.5) 25%,
+		rgba(255,105,117,0.3) 10%,
+		rgba(255,0,09,0.5) 25%,
 		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,1) 50%,
+		rgba(255,0,96,0.8) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg);
 	background: -webkit-linear-gradient(
 		to bottom,
-		rgba(255,255,255,0) 10%,
-		rgba(255,255,255,0.5) 25%,
+		rgba(255,105,117,0.3) 10%,
+		rgba(255,0,09,0.5) 25%,
 		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,1) 50%,
+		rgba(255,0,96,0.8) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
 	background: -ms-linear-gradient(
 		to bottom,
-		rgba(255,255,255,0) 10%,
-		rgba(255,255,255,0.5) 25%,
+		rgba(255,105,117,0.3) 10%,
+		rgba(255,0,09,0.5) 25%,
 		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,1) 50%,
+		rgba(255,0,96,0.8) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
 	background: -moz-linear-gradient(
 		to bottom,
-		rgba(255,255,255,0) 10%,
-		rgba(255,255,255,0.5) 25%,
+		rgba(255,105,117,0.3) 10%,
+		rgba(255,0,09,0.5) 25%,
 		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,1) 50%,
+		rgba(255,0,96,0.8) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
 	background: -o-linear-gradient(
 		to bottom,
-		rgba(255,255,255,0) 10%,
-		rgba(255,255,255,0.5) 25%,
+		rgba(255,105,117,0.3) 10%,
+		rgba(255,0,09,0.5) 25%,
 		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,1) 50%,
+		rgba(255,0,96,0.8) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
@@ -232,10 +232,10 @@ h3.ii {
     top: 0;
     left: 0;
     right: 0;
-    bottom: calc(100% - 80%);
-    width: 100%;
-    background-size: contain;
-	opacity: .15; 
+    bottom: 0;
+    width: 100%; 
+    background-size: contain; 
+	opacity: .25; 
 } 
 .bg_img_oneContents { 
 	background-size: cover; 
