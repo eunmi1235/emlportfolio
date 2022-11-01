@@ -80,7 +80,7 @@ ul,li {
 	font-size: 3.333rem; 
 }
 .project_icon {
-	background: url(/image/project_icon.png) no-repeat 0 0; 
+	background: url("./image/project_icon.png") no-repeat 0 0; 
 	width: 30px;
 	height: 30px;  
 	display: inline-block; 
@@ -190,7 +190,7 @@ h3.ii {
 		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
-		url(/image/n.jpg);
+		url(./image/n.jpg);
 	background: -webkit-linear-gradient(
 		to bottom,
 		rgba(255,255,255,0) 10%,
@@ -199,7 +199,7 @@ h3.ii {
 		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
-		url(/image/n.jpg); 
+		url(./image/n.jpg); 
 	background: -ms-linear-gradient(
 		to bottom,
 		rgba(255,255,255,0) 10%,
@@ -208,7 +208,7 @@ h3.ii {
 		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
-		url(/image/n.jpg); 
+		url(./image/n.jpg); 
 	background: -moz-linear-gradient(
 		to bottom,
 		rgba(255,255,255,0) 10%,
@@ -217,7 +217,7 @@ h3.ii {
 		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
-		url(/image/n.jpg); 
+		url(./image/n.jpg); 
 	background: -o-linear-gradient(
 		to bottom,
 		rgba(255,255,255,0) 10%,
@@ -226,7 +226,7 @@ h3.ii {
 		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
-		url(/image/n.jpg); 
+		url(./image/n.jpg); 
     background-repeat: no-repeat;
     position: absolute;
     top: 0;
@@ -269,20 +269,18 @@ h3.ii {
 .link_title {
 	margin-top: 3px;  
 }
-.projectInfo > li::before,
-.projectInfo > li {
-	display: inline-flex; 
-}  
-.projectInfo>li::before {
-	content: "▪";
-	margin-right: 3px; 
+.listpoint {
+	margin-right: 5px; 
 }
-
 
 @media all and (max-width: 1000px) {
 	.flex_center {
 		display: block;
 		align-items: normal;   
+	}
+	.flex_center-mver {
+		display: flex; 
+		align-items: center;  
 	}
 	.h_img1 {
 		width: 100%;
