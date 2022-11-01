@@ -15,9 +15,16 @@ body {
  -moz-::selection,
  -o-::selection,
  -ms-::selection{ 
-	background: yellow;
-	color: blue;   
+	background: #ffff00;
+	color: #0000ff;    
 }
+a:focus,
+img:focus,
+input:focus,
+textarea:focus,
+label:focus { 
+	outline-color: #0000ff; 
+} 
 ul,li {
 	list-style: none; 
 	padding: 0;
@@ -111,9 +118,51 @@ ul,li {
 .m_only {
 	display: none;
 } 
-
-
-
+.checkicon0 {
+	fill: #fff;
+	stroke: #fff;   
+	stroke-width: 4px;
+	stroke-miterlimit:10;  
+}
+.checkicon1 {
+	fill: none; 
+	stroke: #333;  
+	stroke-width: 4px;
+	stroke-miterlimit:10;  
+	stroke-dashoffset: 0;
+	stroke-dasharray: 60;  
+	animation: historyCheck 1.5s infinite;   
+}  
+@keyframes historyCheck {
+	0% {
+		stroke-dashoffset: 60;
+	} 
+	100% {
+		stroke-dashoffset: 0;   
+	}
+}
+.siteview_icon {
+	animation: siteview_icon 1s infinite;
+}
+@keyframes siteview_icon {
+	from {
+		transform: translate(-10px, 0);
+	}
+	to {
+		transform: translate(0px, 0); 
+	}
+}
+.backbtn_icon:hover {
+	animation: backbtn_icon .7s infinite;  
+} 
+@keyframes backbtn_icon { 
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-10px, 0);  
+	} 
+}
 
 /* contents */  
 .content-wrapper-sub {
@@ -185,45 +234,45 @@ h3.ii {
 	background: linear-gradient(
 		to bottom,
 		rgba(255,105,117,0.3) 10%,
-		rgba(255,0,09,0.5) 25%,
-		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,0.8) 50%,
+		rgba(255,0,09,0.5) 20%,
+		rgba(255,0,09,0.7) 30%, 
+		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg);
 	background: -webkit-linear-gradient(
 		to bottom,
 		rgba(255,105,117,0.3) 10%,
-		rgba(255,0,09,0.5) 25%,
-		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,0.8) 50%,
+		rgba(255,0,09,0.5) 20%,
+		rgba(255,0,09,0.7) 30%, 
+		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
 	background: -ms-linear-gradient(
 		to bottom,
 		rgba(255,105,117,0.3) 10%,
-		rgba(255,0,09,0.5) 25%,
-		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,0.8) 50%,
+		rgba(255,0,09,0.5) 20%,
+		rgba(255,0,09,0.7) 30%, 
+		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
 	background: -moz-linear-gradient(
 		to bottom,
 		rgba(255,105,117,0.3) 10%,
-		rgba(255,0,09,0.5) 25%,
-		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,0.8) 50%,
+		rgba(255,0,09,0.5) 20%,
+		rgba(255,0,09,0.7) 30%, 
+		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
-		rgba(255,105,117,1) 100%), 
+		rgba(255,105,117,1) 100%),  
 		url(./image/n.jpg); 
 	background: -o-linear-gradient(
 		to bottom,
 		rgba(255,105,117,0.3) 10%,
-		rgba(255,0,09,0.5) 25%,
-		rgba(255,0,96,0.7) 40%,
-		rgba(255,0,96,0.8) 50%,
+		rgba(255,0,09,0.5) 20%,
+		rgba(255,0,09,0.7) 30%, 
+		rgba(255,0,96,1) 50%,
 		rgba(255,105,117,1) 75%, 
 		rgba(255,105,117,1) 100%), 
 		url(./image/n.jpg); 
@@ -236,6 +285,7 @@ h3.ii {
     width: 100%; 
     background-size: contain; 
 	opacity: .25; 
+	height: 100%; 
 } 
 .bg_img_oneContents { 
 	background-size: cover; 
