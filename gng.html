@@ -36,16 +36,20 @@
     <link rel="manifest" href="./image/favicon/manifest.json" />
     <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png"/> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script src="./js/common.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="./js/prefixfree.jquery.js" type="text/javascript"></script>    
+    <script src="./js/common.js" type="text/javascript"></script> 
 </head>
 
 <body class="">
     <figure class="bg_img bg_img_oneContents"></figure>
     <div class="background-color-layer"></div>    
     <main class="content-wrapper content-wrapper-sub"> 
-        <section class="container">
-            <button onclick="backWindow()" class="backBtn marbottom10" type="button"><i class="material-symbols-outlined inline-center">arrow_back_ios</i><span class="inline-center fontSize24">뒤로가기</span></button>
+        <section class="container"> 
+            <button onclick="backWindow()" class="backBtn marbottom10" type="button">
+                <i class="material-symbols-outlined inline-center backbtn_icon">arrow_back_ios</i>
+                <span class="inline-center fontSize24 backbtn_tit">뒤로가기</span>
+            </button>
             <section class="row"> 
                 <section class="col-xs-12">  
                     <section class="card">
@@ -83,7 +87,7 @@
                                         <li>
                                             <h3 class="infoname"><i class="material-symbols-outlined webicon">edit_note</i>Notion :&nbsp;<a class="fontStyleKo link_title" href="https://www.notion.so/markupeml/MarkUp-Developer-Web-Publisher-905cbc50b0364c24baede02e9025cfa5?p=24aba1b0bade4432aaf212ec46847a00&pm=c" title="경력기술서" target="_blank">경력기술서</a></h3>
                                         </li>
-                                        <li><h3 class="infoname"><i class="material-symbols-outlined webicon">memory</i>github :&nbsp;<a class="fontStyleKo link_title" href="https://github.com/eunmi1235/emlportfolio.git" title="리뉴얼 github 소스" target="_blank"> 굿앤굿 github</a></h3></li> 
+                                        <li><h3 class="infoname"><i class="material-symbols-outlined webicon">memory</i>github :&nbsp;<a class="fontStyleKo link_title" href="https://github.com/eunmi1235/emlportfolio.git" title="굿앤굿 github 소스" target="_blank"> 굿앤굿 github</a></h3></li> 
                                     </ul>     
                                 </article> 
                             </section> 

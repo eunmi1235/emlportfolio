@@ -36,8 +36,9 @@
     <link rel="manifest" href="./image/favicon/manifest.json" />
     <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png"/> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="./js/prefixfree.jquery.js" type="text/javascript"></script>     
     <script src="./js/common.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body class="">
@@ -45,7 +46,10 @@
     <div class="background-color-layer"></div>    
     <main class="content-wrapper content-wrapper-sub"> 
         <section class="container">
-            <button onclick="backWindow()" class="backBtn marbottom10" type="button"><i class="material-symbols-outlined inline-center">arrow_back_ios</i><span class="inline-center fontSize24">뒤로가기</span></button>
+            <button onclick="backWindow()" class="backBtn marbottom10" type="button">
+                <i class="material-symbols-outlined inline-center backbtn_icon">arrow_back_ios</i>
+                <span class="inline-center fontSize24 backbtn_tit">뒤로가기</span>
+            </button> 
             <section class="row"> 
                 <section class="col-xs-12">  
                     <section class="card">
@@ -86,7 +90,7 @@
                                             <h3 class="infoname"><i class="material-symbols-outlined webicon">edit_note</i>Notion :&nbsp;<a class="fontStyleKo link_title" href="https://markupeml.notion.site/markupeml/MarkUp-Developer-Web-Publisher-905cbc50b0364c24baede02e9025cfa5?p=505d8bc742bc41e99a3812612fbef568&pm=c" title="Guide 및 경력기술서" target="_blank"> 가이드 및 경력기술서</a></h3>
                                         </li>
                                         <li><h3 class="infoname"><i class="material-symbols-outlined webicon">memory</i>github :&nbsp;<a class="fontStyleKo link_title" href="https://github.com/eunmi1235/SArenewal.git" title="리뉴얼 github 소스" target="_blank"> 서울옥션 리뉴얼 github</a></h3></li>
-                                    </ul>     
+                                    </ul>
                                 </article> 
                             </section>
                             <div class="viewbtn flex_center flex_row_center"> 

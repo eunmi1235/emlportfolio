@@ -10,6 +10,34 @@ body {
 	letter-spacing: -1px;  
 	word-spacing: -1px; 
 } 
+/*scroll style */
+body::-webkit-scrollbar,
+body::-ms-scrollbar,
+body::-moz-scrollbar,
+body::-o-scrollbar {
+    /*display: none;*/
+    width: 5px;
+    height: 5px;
+    -ms-overflow-style: none;
+} 
+body::-webkit-scrollbar-thumb,
+body::-ms-scrollbar-thumb,
+body::-moz-scrollbar-thumb,
+body::-o-scrollbar-thumb { 
+    background-color: rgba(255,105,117); 
+	outline-color: #0000ff; 
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+body::-webkit-scrollbar-track,
+body::-ms-scrollbar-track,
+body::-moz-scrollbar-track,
+body::-o-scrollbar-track {
+    background-color: rgba(255,0,96,1); 
+}
 ::selection,
  -webkit-::selection,
  -moz-::selection,
@@ -37,11 +65,11 @@ ul,li {
 .text-blind { /* 대체 텍스트 기법 */
 	overflow: hidden;
 	position: absolute; 
-	border: 0; 
 	width: 1px;
 	height: 1px;
-	clip: rect(1px,1px,1px,1px);
+	clip: rect(1px,1px,1px,1px); 
 	clip-path: inset(50%); 
+	border: 0; 
 } 
 .martop0 {
 	margin-top: 0; 
@@ -144,23 +172,52 @@ ul,li {
 .siteview_icon {
 	animation: siteview_icon 1s infinite;
 }
+.backBtn {
+	font-size: 0; 
+} 
 @keyframes siteview_icon {
 	from {
 		transform: translate(-10px, 0);
+		-webkit-transform: translate(-10px, 0);
+		-ms-transform: translate(-10px, 0);
+		-moz-transform: translate(-10px, 0);
+		-o-transform: translate(-10px, 0);
 	}
 	to {
 		transform: translate(0px, 0); 
+		-webkit-transform: translate(0px, 0); 
+		-ms-transform: translate(0px, 0); 
+		-o-transform: translate(0px, 0); 
+		-moz-transform: translate(0px, 0); 
 	}
 }
-.backbtn_icon:hover {
-	animation: backbtn_icon .7s infinite;  
-} 
-@keyframes backbtn_icon { 
+.backbtn_icon {
+	opacity: 0; 
+}
+.backBtn:hover .backbtn_icon {
+	animation: backbtn_icon .7s ease; 
+	opacity: 1; 
+	transform: translate(-10px, 0);
+	-webkit-transform: translate(-10px, 0);
+	-ms-transform: translate(-10px, 0);
+	-moz-transform: translate(-10px, 0);
+	-o-transform: translate(-10px, 0);
+}
+@keyframes backbtn_icon {
 	0% {
-		transform: translate(0, 0);
-	}
+		transform: translate(0, 0);  
+		-webkit-transform: translate(0, 0);  
+		-moz-transform: translate(0, 0);  
+		-ms-transform: translate(0, 0);  
+		-o-transform: translate(0, 0);  
+	}  
 	100% {
-		transform: translate(-10px, 0);  
+		transform: translate(-10px, 0);
+		-webkit-transform: translate(-10px, 0);
+		-ms-transform: translate(-10px, 0);
+		-moz-transform: translate(-10px, 0);
+		-o-transform: translate(-10px, 0);
+		opacity: 1;
 	} 
 }
 
@@ -180,8 +237,12 @@ ul,li {
 	height: 198px;
 	border: 1px solid #ff0060;
 	padding: 10px;
-	border-radius: 5px;
 	margin-bottom: 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px; 
 }
 
 div.zz {
